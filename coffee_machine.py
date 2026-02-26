@@ -44,7 +44,7 @@ machine_on = True
 while machine_on:
         choice = input("What would you like? (espresso/latte/cappuccino) ").lower()
         def insert_coin():
-
+            """Generates the coins inserted into coffee machine."""
             print("Please insert coins.")
             quarters = int(input("how many quarters?: ")) * coins["quarter"]
             dimes = int(input("how many dimes?: ")) * coins["dime"]
@@ -54,6 +54,8 @@ while machine_on:
             total_coins = sum(total_coins)
             return total_coins
         def calculate(choice):
+            """Calculates the inserted coins and checks to see if machine has enough ingredients and enough money for
+            drink purchase."""
             global money
             drink = MENU[choice]
             drink_cost = drink["cost"]
